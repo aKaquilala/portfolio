@@ -1,36 +1,34 @@
-const toggleButton = document.getElementById('theme-toggle');
+// Theme Toggle
+const toggleButton = document.getElementById("theme-toggle");
 const body = document.body;
+const icon = toggleButton.querySelector(".icon");
 
-// Create an icon span inside the button if it doesn't exist
-let icon = toggleButton.querySelector('.icon');
-if (!icon) {
-    icon = document.createElement('span');
-    icon.classList.add('icon');
-    icon.textContent = '☀️'; // Default sun icon
-    icon.style.display = 'inline-block';
-    icon.style.transition = 'transform 0.4s ease';
-    toggleButton.prepend(icon);
-}
+toggleButton.addEventListener("click", () => {
+    body.classList.toggle("light");
 
-toggleButton.addEventListener('click', () => {
-    body.classList.toggle('dark');
-
-    if(body.classList.contains('dark')) {
-        // Dark mode
-        icon.textContent = '🌙';
-        toggleButton.style.backgroundColor = '#f5f5f5';
-        toggleButton.style.color = '#121212';
-        icon.style.transform = 'translateX(5px)';
+    if (body.classList.contains("light")) {
+        icon.textContent = "☀️";
+        toggleButton.classList.add("active");
     } else {
-        // Light mode
-        icon.textContent = '☀️';
-        toggleButton.style.backgroundColor = '#121212';
-        toggleButton.style.color = '#f5f5f5';
-        icon.style.transform = 'translateX(-5px)';
+        icon.textContent = "🌙";
+        toggleButton.classList.remove("active");
     }
 
-    // Reset icon position after animation
-    setTimeout(() => {
-        icon.style.transform = 'translateX(0)';
-    }, 200);
+    icon.style.transform = "rotate(360deg)";
+    setTimeout(() => icon.style.transform = "rotate(0deg)", 400);
 });
+
+// Scroll Reveal
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+            el.classList.add("visible");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
