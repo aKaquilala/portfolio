@@ -1,93 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angeline Kaquilala</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio of Angeline Kaquilala - Information Systems Student specializing in software development and database management." />
+    <meta name="theme-color" content="#ff66b2" />
+    <title>Angeline Kaquilala · Portfolio</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- Floating Theme Button -->
-    <button id="theme-toggle" class="float-btn">
-        <span class="icon">🌙</span>
-    </button>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-        </ul>
+    <!-- NAV -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-left">
+            <div class="brand" aria-label="Angeline Kaquilala">ANGELINE KAQUILALA</div>
+            <div class="nav-tag" aria-hidden="true">&lt; IT • Information Systems /&gt;</div>
+        </div>
+        <div class="nav-right">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#about" class="nav-link">Skills</a>
+        </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home">
+    <!-- Typewriter Intro -->
+    <header id="home" class="header">
         <div id="intro" class="typewriter">
-            <p>&lt; INFORMATION SYSTEMS/&gt;</p>
+            <p aria-live="polite">&lt; INFORMATION SYSTEMS STUDENT /&gt;</p>
         </div>
 
-        <header class="fade-in">
-            <h1 id="name" class="slide-up">ANGELINE KAQUILALA</h1>
-            <img src="profile.jpg" alt="Profile Picture" id="profile-img" class="pop-in">
-            <p id="course-year" class="slide-up-delay">BS in Information Systems - 2nd Year</p>
-            <div class="tech-line"></div>
-        </header>
-    </section>
+        <!-- Theme Button -->
+        <button id="theme-toggle" class="float-btn" aria-label="Toggle dark/light theme">
+            <span class="icon" aria-hidden="true">🌙</span>
+        </button>
 
-    <!-- Achievements -->
-    <section id="achievements" class="section-card reveal">
-        <h2>Achievements & Certifications</h2>
-        <ul>
-            <li>President’s List – All Terms 2024-2025</li>
-            <li>Dean’s List – All Terms 2024-2025</li>
-            <li>Internal Vice President ISSA - 2025-2026</li>
-            <li>On-the-Job Training (ASKTech Power – Sales, Parts, and Services) - 2024-2025</li>
-        </ul>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section-card reveal">
-        <h2>Previous Projects</h2>
-        <ul>
-            <li><strong>ASH Track</strong> – Financial management tool for freelancers.</li>
-            <li><strong>KMF Nexus</strong> – Public transport ticketing system.</li>
-            <li><strong>ATM Kiosk Simulation</strong> – Banking kiosk simulation.</li>
-        </ul>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section-card reveal">
-        <h2>Skills</h2>
-        <p>Core technologies and proficiency</p>
-
-        <div class="skill">
-            <span>C#</span>
-            <div class="bar"><div class="fill" style="--level: 85%;"></div></div>
+        <div class="hero">
+            <img src="profile.jpg" alt="Profile picture of Angeline Kaquilala" id="profile-img" loading="eager" />
+            <div class="hero-text">
+                <h1 id="name">ANGELINE KAQUILALA</h1>
+                <p id="course-year">BS in Information Systems — 2nd Year</p>
+                <div class="tech-line" role="presentation"></div>
+                
+                <!-- Social Links (Optional - add your links) -->
+                <div class="social-links">
+                    <a href="mailto:your.email@example.com" class="social-btn" aria-label="Email me">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/yourusername" class="social-btn" aria-label="GitHub profile" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" class="social-btn" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <div class="skill">
-            <span>Java</span>
-            <div class="bar"><div class="fill" style="--level: 78%;"></div></div>
-        </div>
+    <!-- MAIN -->
+    <main>
+        <!-- Achievements -->
+        <section id="achievements" class="section-card reveal" aria-labelledby="achievements-heading">
+            <h2 id="achievements-heading">Achievements & Certifications</h2>
+            <ul class="achieve-list">
+                <li><strong>President's List</strong> – All Terms</li>
+                <li><strong>Dean's List</strong> – All Terms</li>
+                <li><strong>Internal Vice President</strong> – ISSA (Information Systems Student Association)</li>
+                <li><strong>On-the-Job Training</strong> — ASKTech Power (Sales, Parts, and Services)</li>
+            </ul>
+        </section>
 
-        <div class="skill">
-            <span>JavaScript</span>
-            <div class="bar"><div class="fill" style="--level: 80%;"></div></div>
-        </div>
+        <!-- Projects -->
+        <section id="projects" class="section-card reveal" aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Previous Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-icon">💼</div>
+                    <h3>ASH Track</h3>
+                    <p>A desktop Java application to help freelancers manage income, accounts, and expenses.</p>
+                    <div class="project-tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">Desktop</span>
+                    </div>
+                </article>
 
-        <div class="skill">
-            <span>SQL</span>
-            <div class="bar"><div class="fill" style="--level: 70%;"></div></div>
-        </div>
+                <article class="project-card">
+                    <div class="project-icon">🎫</div>
+                    <h3>KMF Nexus</h3>
+                    <p>A public transport ticketing system for faster, secure ticket purchase & validation.</p>
+                    <div class="project-tags">
+                        <span class="tag">Systems</span>
+                        <span class="tag">Backend</span>
+                    </div>
+                </article>
 
-        <div class="skill">
-            <span>HTML / CSS</span>
-            <div class="bar"><div class="fill" style="--level: 90%;"></div></div>
-        </div>
-    </section>
+                <article class="project-card">
+                    <div class="project-icon">🏧</div>
+                    <h3>ATM Kiosk Simulation</h3>
+                    <p>A kiosk demo showcasing balance inquiry, withdrawal, deposit simulation, and authentication.</p>
+                    <div class="project-tags">
+                        <span class="tag">Simulation</span>
+                        <span class="tag">UI/UX</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="about" class="section-card reveal" aria-labelledby="skills-heading">
+            <h2 id="skills-heading">Skills</h2>
+            <p class="skills-intro">Core technologies and proficiency</p>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>C#</span><span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="C# proficiency">
+                    <div class="skill-fill" data-fill="85"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>Java</span><span class="skill-percent">78%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" aria-label="Java proficiency">
+                    <div class="skill-fill" data-fill="78"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>JavaScript</span><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency">
+                    <div class="skill-fill" data-fill="80"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>SQL</span><span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" aria-label="SQL proficiency">
+                    <div class="skill-fill" data-fill="70"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>HTML / CSS</span><span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="HTML/CSS proficiency">
+                    <div class="skill-fill" data-fill="90"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact/Footer -->
+        <footer class="section-card reveal footer-card">
+            <h2>Let's Connect</h2>
+            <p class="footer-text">I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+            <a href="mailto:your.email@example.com" class="cta-button">Get in Touch</a>
+            <p class="copyright">© 2025 Angeline Kaquilala. All rights reserved.</p>
+        </footer>
+    </main>
 
     <script src="script.js"></script>
 </body>
