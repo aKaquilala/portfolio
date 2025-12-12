@@ -1,48 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angeline Kaquilala Student Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Angeline Kaquilala · Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-left">
+            <div class="brand">ANGELINE KAQUILALA</div>
+            <div class="nav-tag">&lt; IT • Information Systems /&gt;</div>
+        </div>
+        <div class="nav-right">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#about" class="nav-link">About</a>
+        </div>
+    </nav>
+
     <!-- Typewriter Intro -->
-    <div id="intro" class="typewriter">
-        <p>&lt; INFORMATION SYSTEMS STUDENT /&gt;</p>
-    </div>
+    <header id="home" class="header">
+        <div id="intro" class="typewriter">
+            <p>&lt; INFORMATION SYSTEMS STUDENT /&gt;</p>
+        </div>
 
-    <!-- Theme Button -->
-    <button id="theme-toggle" class="float-btn">
-        <span class="icon">🌙</span>
-    </button>
+        <!-- Theme Button -->
+        <button id="theme-toggle" class="float-btn" aria-label="Toggle theme">
+            <span class="icon">🌙</span>
+        </button>
 
-    <header class="fade-in">
-        <h1 id="name" class="slide-up">ANGELINE KAQUILALA</h1>
-        <img src="profile.jpg" alt="Profile Picture" id="profile-img" class="pop-in">
-        <p id="course-year" class="slide-up-delay">BS in Information Systems - 2nd Year</p>
-        <div class="tech-line"></div>
+        <div class="hero">
+            <img src="profile.jpg" alt="Profile picture of Angeline Kaquilala" id="profile-img" />
+            <div class="hero-text">
+                <h1 id="name">ANGELINE KAQUILALA</h1>
+                <p id="course-year">BS in Information Systems — 2nd Year</p>
+                <div class="tech-line"></div>
+            </div>
+        </div>
     </header>
 
-    <section id="achievements" class="section-card reveal">
-        <h2>Achievements & Certifications</h2>
-        <ul>
-            <li>President’s List – All Terms 2024-2025</li>
-            <li>Dean’s List – All Terms 2024-2025</li>
-            <li>ISSA First Year Representative – 2024-2025</li>
-            <li>ISSA Internal Vice President – 2025-2026</li>
-        </ul>
-    </section>
+    <!-- MAIN -->
+    <main>
+        <!-- Achievements -->
+        <section id="achievements" class="section-card reveal">
+            <h2>Achievements & Certifications</h2>
+            <ul class="achieve-list">
+                <li>President’s List – All Terms</li>
+                <li>Dean’s List – All Terms</li>
+                <li>Internal Vice President – ISSA (Information Systems Student Association)</li>
+                <li>On-the-Job Training — ASKTech Power (Sales, Parts, and Services)</li>
+            </ul>
+        </section>
 
-    <section id="projects" class="section-card reveal">
-        <h2>Previous Projects</h2>
-        <ul>
-            <li><strong>ASH Track</strong> – Financial management tool for freelancers.</li>
-            <li><strong>KMF Nexus</strong> – Public transport ticketing system.</li>
-            <li><strong>ATM Kiosk Simulation</strong> – Basic banking function simulator.</li>
-        </ul>
-    </section>
+        <!-- Projects -->
+        <section id="projects" class="section-card reveal">
+            <h2>Previous Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>ASH Track</h3>
+                    <p>A desktop Java application to help freelancers manage income, accounts, and expenses.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>KMF Nexus</h3>
+                    <p>A public transport ticketing system for faster, secure ticket purchase & validation.</p>
+                </article>
+
+                <article class="project-card">
+                    <h3>ATM Kiosk Simulation</h3>
+                    <p>A kiosk demo showcasing balance inquiry, withdrawal, deposit simulation, and authentication.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="about" class="section-card reveal">
+            <h2>Skills</h2>
+            <p class="skills-intro">Core technologies and proficiency</p>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>C#</span><span class="skill-percent">85%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-fill="85"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>Java</span><span class="skill-percent">78%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-fill="78"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>JavaScript</span><span class="skill-percent">80%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-fill="80"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>SQL</span><span class="skill-percent">70%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-fill="70"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-head">
+                    <span>HTML / CSS</span><span class="skill-percent">90%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-fill="90"></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
