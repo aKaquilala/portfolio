@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Angeline Kaquilala Student Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-      <header>
-         <h1 id="name">ANGELINE KAQUILALA</h1>
-         <img src="profile.jpg" alt="Profile Picture" id="profile-img">
-         <p id="course-year">BS in Information Systems - 2nd Year</p>
-         <button id="theme-toggle">Switch Theme</button>
-      </header>
+<head>
+    <meta charset="UTF-8">
+    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angeline Kaquilala Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-      <section id="achievements">
-         <h2>Achievements & Certifications</h2>
-         <ul>
-            <li>President’s List – All Terms</li>
-            <li>Dean’s List – All Terms</li>
-            <li>Internal Vice President – ISSA (Information Systems Student Association)</li>
-         </ul>
-      </section>
+    <!-- Typewriter Intro -->
+    <div id="intro" class="typewriter">
+        <p>&lt; INFORMATION SYSTEMS STUDENT /&gt;</p>
+    </div>
 
-      <section id="projects">
-         <h2>Previous Projects</h2>
-         <ul>
-            <li><strong>ASH Track</strong> – A desktop Java application that helps freelancers and independent contractors efficiently manage their finances by allowing them to Account, Spend, and Handle income and expenses.</li>
+    <!-- Theme Button -->
+    <button id="theme-toggle" class="float-btn">
+        <span class="icon">🌙</span>
+    </button>
 
-            <li><strong>KMF Nexus</strong> – A public transport ticketing system designed to give passengers a faster, secure, and more convenient way to purchase and validate tickets, while enabling operators and administrators to manage transactions effectively.</li>
+    <header class="fade-in">
+        <h1 id="name" class="slide-up">ANGELINE KAQUILALA</h1>
+        <img src="profile.jpg" alt="Profile Picture" id="profile-img" class="pop-in">
+        <p id="course-year" class="slide-up-delay">BS in Information Systems - 2nd Year</p>
+        <div class="tech-line"></div>
+    </header>
 
-            <li><strong>ATM Kiosk Simulation</strong> – A simple ATM kiosk interface demonstrating essential banking functions such as balance inquiry, cash withdrawal, deposit simulation, and secure user authentication.</li>
-         </ul>
-      </section>
+    <section id="achievements" class="section-card reveal">
+        <h2>Achievements & Certifications</h2>
+        <ul>
+            <li>President’s List – All Terms 2024-2025</li>
+            <li>Dean’s List – All Terms 2024-2025</li>
+            <li>ISSA First Year Representative – 2024-2025</li>
+            <li>ISSA Internal Vice President – 2025-2026</li>
+        </ul>
+    </section>
 
-      <script src="script.js"></script>
-   </body>
+    <section id="projects" class="section-card reveal">
+        <h2>Previous Projects</h2>
+        <ul>
+            <li><strong>ASH Track</strong> – Financial management tool for freelancers.</li>
+            <li><strong>KMF Nexus</strong> – Public transport ticketing system.</li>
+            <li><strong>ATM Kiosk Simulation</strong> – Basic banking function simulator.</li>
+        </ul>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
