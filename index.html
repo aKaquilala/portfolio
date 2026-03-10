@@ -124,6 +124,25 @@
                         <span class="external-icon">↗</span>
                     </div>
                 </a>
+
+                <!-- SA-Project: SMART QUEUE PH -->
+                <div class="project-card sa-project pixel-corners">
+                    <div class="sa-badge">SA Project</div>
+                    <div class="project-emoji">🎟️</div>
+                    <h3 class="project-title">Smart Queue PH</h3>
+                    <p class="project-desc">Queue management system with user & admin panels</p>
+                    <div class="sa-links">
+                        <a href="https://samplesmartqueue.vercel.app/" target="_blank" rel="noopener noreferrer" class="sa-link pixel-corners">
+                            <span>👤 User Panel</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                        <a href="https://samplesmartqueue.vercel.app/admin.html" target="_blank" rel="noopener noreferrer" class="sa-link pixel-corners">
+                            <span>🔧 Admin Panel</span>
+                            <span class="external-icon">↗</span>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -235,6 +254,64 @@
         <p class="footer-email">akaquilala@mcm.edu.ph</p>
     </footer>
 
+    <style>
+        /* SA Project card */
+        .project-card.sa-project {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            cursor: default;
+        }
+
+        .sa-badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: #fcd34d;
+            color: #92400e;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 6px;
+            padding: 4px 6px;
+            border: 3px solid #b45309;
+        }
+
+        .project-desc {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 7px;
+            color: #d97706;
+            line-height: 1.8;
+            margin-top: 2px;
+        }
+
+        .sa-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: auto;
+            padding-top: 10px;
+        }
+
+        .sa-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 10px;
+            background: #fef9c3;
+            border: 3px solid #fcd34d;
+            color: #b45309;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 7px;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .sa-link:hover {
+            background: #fcd34d;
+            color: #92400e;
+            border-color: #b45309;
+        }
+    </style>
     <script src="script.js"></script>
 </body>
 </html>
